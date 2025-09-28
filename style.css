@@ -66,6 +66,21 @@ body{
 .greetings span:nth-child(11) { animation-delay: 2s; }
 .greetings span:nth-child(12) { animation-delay: 2.2s; }
 
+.greetings, .description {
+  display: flex;          /* Activar flexbox */
+  flex-wrap: wrap;        /* Permite que las letras pasen a la siguiente línea si no caben */
+  justify-content: center;/* Centrar horizontalmente */
+  font-size: 2rem;        /* Ajusta según prefieras */
+  gap: 0.1em;             /* Espacio entre letras */
+  text-align: center;     /* Asegura que el texto se centre cuando se haga wrap */
+}
+
+@media (max-width: 600px) {
+  .greetings, .description {
+    font-size: 1.5rem; /* Reduce tamaño de letras en pantallas pequeñas */
+  }
+}
+
 
 .description span {
     display: inline-block;
